@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --primary-gradient: linear-gradient(135deg, #dadcf3 0%, #91abf3 100%);
     --secondary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --dark-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-    --glass-bg: rgba(255, 255, 255, 0.15);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
-    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 25px 50px rgba(0, 0, 0, 0.4);
+    --dark-gradient: linear-gradient(135deg, #09081a 0%, #645fa0 50%, #24243e 100%);
+    --glass-bg: rgba(94, 84, 153, 0.969);
+    --glass-border: 1px solid rgba(0, 0, 0, 0);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.447);
+    --shadow-hover: 0 25px 50px rgba(140, 92, 92, 0.4);
 }
 
 body {
@@ -51,21 +51,21 @@ h1 {
     font-size: 2.8em;
     text-align: center;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(45deg, #fff, #ddd);
+    text-shadow: 2px 2px 8px rgba(233, 224, 224, 0.892);
+    background: linear-gradient(45deg, #f8f6f6, #ddd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .alert {
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    background: linear-gradient(90deg, #7a021e, #ff4b2b);
     padding: 20px;
     border-radius: 15px;
     margin: 25px 0;
     text-align: center;
     font-weight: bold;
-    box-shadow: 0 10px 30px rgba(255, 65, 108, 0.4);
+    box-shadow: 0 10px 30px rgba(204, 135, 151, 0.4);
     animation: pulse 2s infinite;
 }
 
@@ -236,8 +236,89 @@ h1 {
     100% { transform: translateX(100%); }
 }
 
+.search-box {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.search-box form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    padding: 12px 20px;
+    font-size: 1em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 300px;
+    transition: all 0.3s;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-box button {
+    padding: 12px 30px;
+    font-size: 1em;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+}
+
+.search-result {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s;
+}
+
+.search-result:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(10px);
+}
+
+.search-result h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: white;
+}
+
+.search-result a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .container { padding: 15px; }
     h1 { font-size: 2em; }
     .card-grid { grid-template-columns: 1fr; }
+    .search-box input { width: 200px; }
+}
+
+a {      /* 未訪問のリンク */
+    color: white;
 }

@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>影の劇団 </title>
+    <title>OFF SCRIPT SHOW </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="glitch"></div>
     
-    <div class="container">
+    
+
         <div class="glass">
-            <h1>🎭 影の劇団</h1>
-            <p style="text-align:center;font-size:1.3em;margin-bottom:30px">東京・小劇場界の新星</p>
+            <h1>劇団 OFF SCRIPT SHOW</h1>
+            <p style="text-align:center;font-size:1em;margin-bottom:30px">霧沼区を拠点に活動する劇団
+            </p>
         </div>
         
         <div class="alert">
-            🚨 次回公演「永遠の幕間」<strong>無期限延期</strong>
+            <a href="diary.html"> 次回公演「永遠の幕間」公演中止のお知らせ</a>
+        
+        </div>   
+
+        <div class="alert">
+            📢 劇団員募集中！詳細は<a href="diary.html">こちら</a>をご覧ください。
         </div>
-        
-        <p style="font-size:1.15em;line-height:1.8;text-align:center;margin:30px 0">
-            演出家・白石 幕の体調不良により公演中止。<br>
-            詳細は以下の内部資料で確認ください。
-        </p>
-        
+
+        <div class="search-box">
+            <form action="search.html" method="GET">
+                <input type="text" name="q" placeholder="キーワード" required>
+                <button type="submit">検索</button>
+            </form>
+        </div>
+
         <div class="card-grid">
             <div class="card fade-in">
                 <h2>📖 <a href="diary.html" class="btn">稽古日誌</a></h2>
@@ -40,7 +48,12 @@
                 <p>関係者ログインパスワード入力画面</p>
             </div>
         </div>
-    </div>
+
+        <form action="search.html" method="GET">
+            <input type="text" name="q" placeholder="検索キーワード...">
+            <button type="submit">検索</button>
+        </form>
+    
     
     <script src="script.js"></script>
 </body>

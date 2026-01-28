@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索結果 - OFF SCRIPT SHOW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glitch"></div>
+    
+    <div class="container">
+        <div class="glass">
+            <h1>劇団 OFF SCRIPT SHOW</h1>
+            <p style="text-align:center;font-size:1.3em;margin-bottom:30px">東京・霧沼区を拠点に活動する劇団</p>
+        </div>
+
+        <div class="search-box">
+            <form action="search.html" method="GET">
+                <input type="text" name="q" id="searchInput" placeholder="検索キーワード..." required>
+                <button type="submit">検索</button>
+            </form>
+        </div>
+
+        <div class="glass" style="margin-top: 30px;">
+            <h2 id="searchTitle">検索結果</h2>
+            <div id="results">
+                <p style="text-align:center;">検索キーワードを入力してください</p>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 30px;">
+            <a href="index.html" style="color: #667eea; text-decoration: underline;">← トップページに戻る</a>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>
